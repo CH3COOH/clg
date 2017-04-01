@@ -13,11 +13,17 @@ enum Code: String {
     case ObjC = "objc"
     case Android = "android"
 
-    func generateCode(_ colors: [Color], directory: String) {
+    func generateCode(_ colors: [Color], directory: String, ignoreCase: IgnoreCase) {
         switch self {
         case .Swift:
             func classFunc(_ color: Color) -> String {
-                let methodName = color.name.camelCase().sanitizeAsMethodName()
+                let methodName: String
+                switch ignoreCase {
+                case .ignore:
+                    methodName = color.name
+                default:
+                    methodName = color.name.camelCase().sanitizeAsMethodName()
+                }
                 let code =
                     "    /// \(color.name.camelCase().sanitizeAsMethodName()) color (\(color.hexStringRepresentation()))\n" +
                     "    /// - returns: \(color.hexStringRepresentation())\n" +

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA6D69581E8F92810089B378 /* IgnoreCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6D69571E8F92810089B378 /* IgnoreCase.swift */; };
 		D0B096AE1B09B38400FB8AE6 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B096AD1B09B38400FB8AE6 /* Color.swift */; };
 		D0B096B01B09B96800FB8AE6 /* CodeGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B096AF1B09B96800FB8AE6 /* CodeGenerator.swift */; };
 		D0B096B61B09BF9C00FB8AE6 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B096B51B09BF9C00FB8AE6 /* String+Extension.swift */; };
@@ -67,6 +68,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		AA6D69571E8F92810089B378 /* IgnoreCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IgnoreCase.swift; sourceTree = "<group>"; };
 		D0B096AD1B09B38400FB8AE6 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		D0B096AF1B09B96800FB8AE6 /* CodeGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeGenerator.swift; sourceTree = "<group>"; };
 		D0B096B51B09BF9C00FB8AE6 /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 				E375C84A1B39959500BDCFF8 /* CLRParser.swift */,
 				E3003E361B3B10B000C682FF /* CSVParser.swift */,
 				E375C8501B39998400BDCFF8 /* FileDetector.swift */,
+				AA6D69571E8F92810089B378 /* IgnoreCase.swift */,
 			);
 			path = ColorListGenerator;
 			sourceTree = "<group>";
@@ -367,6 +370,7 @@
 				D0B096B01B09B96800FB8AE6 /* CodeGenerator.swift in Sources */,
 				D0C205191B0ACD4600BFD293 /* ToJSON.swift in Sources */,
 				E375C84B1B39959500BDCFF8 /* CLRParser.swift in Sources */,
+				AA6D69581E8F92810089B378 /* IgnoreCase.swift in Sources */,
 				D0B096B61B09BF9C00FB8AE6 /* String+Extension.swift in Sources */,
 				E3003E371B3B10B000C682FF /* CSVParser.swift in Sources */,
 				E30804821B1DF7DF007A95AF /* Help.swift in Sources */,

@@ -12,12 +12,14 @@ import Foundation
 class ToCode: Root {
     var output: String?
     var code: String?
+    var ignorecase: String?
     var paletteName: String?
 
     override func commandOption() -> CSNCommandOption? {
         let option = CSNCommandOption()
         option.register("output", shortcut: "o", keyName:nil , requirement: CSNCommandOptionRequirement.required)
         option.register("code", shortcut: "c", keyName:nil , requirement: CSNCommandOptionRequirement.required)
+        option.register("ignorecase", shortcut: "i", keyName:nil , requirement: CSNCommandOptionRequirement.optional)
         return option
     }
 
@@ -81,8 +83,15 @@ class ToCode: Root {
             codeType = "swift"
         }
 
+        let ignoreCase: IgnoreCase
+        if let i = self.ignorecase {
+            ignoreCase = IgnoreCase(rawValue: i) ?? .none
+        } else {
+            ignoreCase = .none
+        }
+        
         if let c = Code(rawValue:codeType) {
-            c.generateCode(colors, directory:filePath)
+            c.generateCode(colors, directory:filePath, ignoreCase: ignoreCase)
         }
 
         return EXIT_SUCCESS
@@ -97,6 +106,6 @@ class ToCode: Root {
     }
 
     func generateCodeFile(colors: [Color], code: String) {
-        Code(rawValue:code)?.generateCode(colors, directory:".")
+        Code(rawValue:code)?.generateCode(colors, directory:".", ignoreCase: .none)
     }
 }
